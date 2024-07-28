@@ -8,7 +8,7 @@ $edate = $_GET["eDate"];
 
 $success = null;
 header('Content-Type: application/json');
-$conn = mysqli_connect('localhost', 'root', '', 'library_details');
+$conn = mysqli_connect('localhost', 'root1', 'root1', 'library_details');
 $query = "INSERT INTO data (B_Name, B_Code, Name, Email, sDate, eDate) VALUES ('{$bname}', {$bcode}, '{$name}', '{$email}', '{$sdate}', '{$edate}')";
 $result = mysqli_query($conn, $query);
 if($result)
