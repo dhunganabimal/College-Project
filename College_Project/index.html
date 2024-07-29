@@ -23,7 +23,7 @@
           <a href="#">
             <img src="logo.png" class="logo" />
           </a>
-          <a class="title">Library Module</a>
+          <a class="title">Library Management System</a>
         </div>
         <div class="middle"></div>
         <div class="right">
@@ -47,7 +47,40 @@
       <a href="#">About Us</a>
     </div>
   </header>
-<main class="check">
+  
+<main>
+  <div id="bookModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" id="closeBtn">&times;</span>
+    <form class="form-container" id="bookForm" method="post" action="connect.php">
+      <div class="form-group">
+        <label for="bookName">Enter Book Name</label>
+        <input type="text" id="bookName" name="bookName" required>
+      </div>
+      <div class="form-group">
+        <label for="bookcode">Enter Book Code</label>
+        <input type="text" id="bookcode" name="bookcode" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Enter Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Enter Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="sDate">Enter Starting Date</label>
+        <input type="date" id="sDate" name="sDate" required>
+      </div>
+      <div class="form-group">
+        <label for="eDate">Enter Ending Date</label>
+        <input type="date" id="eDate" name="eDate" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
  <div class="software">
   <h2 class="head">Software Engineering</h2>
   <div class="Row">
@@ -57,40 +90,9 @@
       </div>
       <div class="bottom">
     <h3>Calculus-I</h3>
-    <button id="showFormBtn">Lend</button>
+    <button class="showFormBtn">Lend</button>
 
-    <div id="formModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeBtn">&times;</span>
-            <form class="form-container" id="bookForm" method="get" action="connect.php">
-                <div class="form-group">
-                    <label for="bookName">Enter Book Name</label>
-                    <input type="text" id="bookName" name="bookName" required>
-                </div>
-                <div class="form-group">
-                    <label for="bookcode">Enter Book Code</label>
-                    <input type="text" id="bookcode" name="bookcode" required>
-                </div>
-                <div class="form-group">
-                    <label for="name">Enter Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Enter Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="sDate">Enter Starting Date</label>
-                    <input type="date" id="sDate" name="sDate" required>
-                </div>
-                <div class="form-group">
-                    <label for="eDate">Enter Ending Date</label>
-                    <input type="date" id="eDate" name="eDate" required>
-                </div>
-                <button type="submit" id="sUmbit">Sumbit</button>
-            </form>
-        </div>
-    </div>
+    
       </div>
     </div>
     <div class="container">
@@ -99,7 +101,7 @@
       </div>
       <div class="bottom">
     <h3>Programming In C</h3>
-    <button>Lend </button>
+    <button class="showFormBtn">Lend </button>
       </div>
     </div>
     <div class="container">
@@ -108,7 +110,8 @@
       </div>
       <div class="bottom">
     <h3>Discrete Math</h3>
-    <button>Lend </button>
+    <button class="showFormBtn">Lend </button>
+    
       </div>
     </div>
     <div class="container">
@@ -117,7 +120,7 @@
       </div>
       <div class="bottom">
     <h3 id="bName">PST</h3>
-    <button>Lend </button>
+    <button class="showFormBtn">Lend </button>
       </div>
     </div>
     <div class="container">
@@ -126,39 +129,8 @@
       </div>
       <div class="bottom">
     <h3>Drawing</h3>
-    <button id="showFormBtn">Lend</button>
-    <div id="formModal" class="modal">
-      <div class="modal-content">
-          <span class="close" id="closeBtn">&times;</span>
-          <form class="form-container" id="bookForm" method="post" action="index.php">
-              <div class="form-group">
-                  <label for="bookName">Enter Book Name</label>
-                  <input type="text" id="bookName" name="bookName" required>
-              </div>
-              <div class="form-group">
-                  <label for="bookcode">Enter Book Code</label>
-                  <input type="text" id="bookcode" name="bookcode" required>
-              </div>
-              <div class="form-group">
-                  <label for="name">Enter Name</label>
-                  <input type="text" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                  <label for="email">Enter Email</label>
-                  <input type="email" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                  <label for="sDate">Enter Starting Date</label>
-                  <input type="date" id="sDate" name="sDate" required>
-              </div>
-              <div class="form-group">
-                  <label for="eDate">Enter Ending Date</label>
-                  <input type="date" id="eDate" name="eDate" required>
-              </div>
-              <button type="submit" id="sUmbit">Sumbit</button>
-          </form>
-      </div>
-  </div>
+    <button class="showFormBtn">Lend</button>
+    
     </div>
   
       
@@ -169,7 +141,7 @@
       </div>
       <div class="bottom">
     <h3>Digital Logic</h3>
-    <button>Lend </button>
+    <button class="showFormBtn">Lend </button>
       </div>
     </div>
   </div>
@@ -184,7 +156,7 @@
         </div>
         <div class="bottom">
       <h3>Microprocessors</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
       <div class="container">
@@ -193,7 +165,7 @@
         </div>
         <div class="bottom"  >
       <h3>Numerical Methods</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
       <div class="container">
@@ -202,7 +174,7 @@
         </div>
         <div class="bottom">
       <h3>Instrumentation</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
       <div class="container">
@@ -211,7 +183,7 @@
         </div>
         <div class="bottom">
       <h3 id="bName">Chemistry</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
       <div class="container">
@@ -220,7 +192,7 @@
         </div>
         <div class="bottom">
       <h3>Drawing</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
       <div class="container">
@@ -229,7 +201,7 @@
         </div>
         <div class="bottom">
       <h3>Algebra & Geometry</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
     </div>
@@ -243,7 +215,7 @@
         </div>
         <div class="bottom">
       <h3>Electrical Machines</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
       <div class="container">
@@ -252,7 +224,7 @@
         </div>
         <div class="bottom">
       <h3>Network Theory</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
       <div class="container">
@@ -261,7 +233,7 @@
         </div>
         <div class="bottom">
       <h3>Power Electronics</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
       <div class="container">
@@ -270,7 +242,7 @@
         </div>
         <div class="bottom">
       <h3 id="bName">Control Systems</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
       <div class="container">
@@ -279,7 +251,7 @@
         </div>
         <div class="bottom">
       <h3>Drawing</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
       <div class="container">
@@ -288,7 +260,7 @@
         </div>
         <div class="bottom">
       <h3>Machine Design</h3>
-      <button>Lend </button>
+      <button class="showFormBtn">Lend </button>
         </div>
       </div>
     </div>
@@ -300,7 +272,7 @@
   <div class="footer">
     <div class="footer-left">
       <img src="logo.png" alt="Library Module Logo" class="flogo">
-      <p>&copy; Copyright 2023 Library Module. All rights reserved.</p>
+      <p>&copy; Copyright 2023 Library Management System. All rights reserved.</p>
     </div>
     <div class="footer-right">
       <p>GitHub</p>
@@ -312,6 +284,8 @@
     
   
 </footer>
+
+
 <script src="script.js"></script>
 
 </body>

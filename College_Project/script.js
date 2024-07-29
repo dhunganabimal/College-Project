@@ -58,26 +58,47 @@ function passToConnect(bookName, bookcode, name, email, sDate, eDate) {
     });
 }
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  var modal = document.getElementById("formModal");
-  var showFormBtn = document.getElementById("showFormBtn");
-  var span = document.getElementsByClassName("close")[0];
+// document.addEventListener("DOMContentLoaded", (event) => {
+//   var modal = document.getElementByClassName("modal")[0];
+//   var showFormBtn = document.getElementByClassName("showFormBtn")[0];
+//   var span = document.getElementsByClassName("close")[0];
 
-  showFormBtn.onclick = function () {
-    modal.style.display = "block";
-  };
+//   showFormBtn.onclick = function () {
+//     modal.style.display = "block";
+//   };
 
-  span.onclick = function () {
-    modal.style.display = "none";
-  };
+//   span.onclick = function () {
+//     modal.style.display = "none";
+//   };
 
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
+//   window.onclick = function (event) {
+//     if (event.target == modal) {
+//       modal.style.display = "none";
+//     }
+//   };
+// 
+ document.addEventListener("DOMContentLoaded", (event) => {
+      var modal = document.getElementById("bookModal");
+      var showFormBtns = document.querySelectorAll(".showFormBtn"); 
+      var span = document.getElementById("closeBtn");
 
-  document.getElementById("bookForm").onsubmit = function (event) {
+      showFormBtns.forEach(function(button) {
+        button.onclick = function(event) {
+          event.preventDefault(); 
+          modal.style.display = "block";
+        };
+      });
+
+      span.onclick = function() {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+      document.getElementById("bookForm").onsubmit = function (event) {
     event.preventDefault();
     modal.style.display = "none";
     passToConnect(
@@ -89,4 +110,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
       eDate.value
     );
   };
-});
+
+    });
+ 
+
+  
